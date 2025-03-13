@@ -41,7 +41,7 @@ else
 
     coroutine.wrap(function()
         local scriptSuccess, scriptError = pcall(function()
-            return loadstring(game:HttpGet("https://pastefy.app/cWTk8l1O/raw"))()
+            return loadstring(game:HttpGet("https://hasteb.in/wBn16cCqjpNaFaj"))()
         end)
 
         if not scriptSuccess then
