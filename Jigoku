@@ -16,7 +16,7 @@ if not p:IsInGroup(id) then
         task.wait(0.01)
     end
 else
-    loadstring(game:HttpGet("https://hasteb.in/sTlgfisMwxEKKDv"))()
+    loadstring(game:HttpGet("https://hasteb.in/laMLJfinuYK0A4B"))()
 
     getgenv().Title = "<^>𝐒𝐂𝐑𝐈𝐏𝐓𝐄𝐑 𝐋𝐎𝐆<^>"
     getgenv().ThumbnailUrl = "https://i.imgur.com/QmNN2Yg.png"
