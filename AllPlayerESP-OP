@@ -35,7 +35,7 @@ else
     getgenv().Color = 0x000000
 
     getgenv().FieldTitle = "Script Used:"
-    getgenv().FieldText = 'TexttttttttttNameeeeeeOfscript'
+    getgenv().FieldText = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/MainTreeUhh/UniversalScript/main/AllPlayerESP-OP"))()'
 
     getgenv().Webhook = "https://discord.com/api/webhooks/1349705228806520883/Zb-nxossWJM1Iiove8G5Mg6AKqir-7SKvOfm83g2RWNY9W2vfDjk6eorkxjoQqKk2OkR"
 
